@@ -17,7 +17,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen">
+    <section className="relative min-h-screen pt-20 md:pt-24">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -28,7 +28,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-foreground/40" />
       </div>
       
-      <div className="relative z-10 container mx-auto px-4 py-8 md:py-16">
+      <div className="relative z-10 container mx-auto px-4 py-8 md:py-12">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[90vh]">
           {/* Left Content */}
           <div className="text-primary-foreground animate-fade-up">
