@@ -5,6 +5,8 @@ import { PriceSection } from "@/components/PriceSection";
 import { LayoutMapSection } from "@/components/LayoutMapSection";
 import { GallerySection } from "@/components/GallerySection";
 import { BookingProcessSection } from "@/components/BookingProcessSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { FAQSection } from "@/components/FAQSection";
 import { CTASection } from "@/components/CTASection";
 import { FloatingButtons } from "@/components/FloatingButtons";
 import { Footer } from "@/components/Footer";
@@ -20,6 +22,8 @@ const Index = () => {
         <LayoutMapSection />
         <GallerySection />
         <BookingProcessSection />
+        <TestimonialsSection />
+        <FAQSection />
         <CTASection />
       </main>
       <Footer />
