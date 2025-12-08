@@ -2,7 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Download, AlertTriangle, Check } from "lucide-react";
 
 const pricingData = [
+  { size: "820 sq.ft", pricePerSqft: "₹1,599", total: "₹13,11,180" },
+  { size: "920 sq.ft", pricePerSqft: "₹1,599", total: "₹14,71,080" },
   { size: "1000 sq.ft", pricePerSqft: "₹1,599", total: "₹15,99,000" },
+  { size: "1040 sq.ft", pricePerSqft: "₹1,599", total: "₹16,62,960" },
   { size: "1100 sq.ft", pricePerSqft: "₹1,599", total: "₹17,58,900" },
   { size: "1300 sq.ft", pricePerSqft: "₹1,599", total: "₹20,78,700" },
   { size: "1458 sq.ft", pricePerSqft: "₹1,599", total: "₹23,31,342" },
