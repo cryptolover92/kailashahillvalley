@@ -19,10 +19,10 @@ export function Header() {
           <Button 
             variant="call"
             size="sm" 
-            onClick={() => window.open("tel:7978000361", "_self")}
+            onClick={() => window.open("tel:7488883287", "_self")}
           >
             <Phone className="w-4 h-4" />
-            <span className="hidden sm:inline">7978000361</span>
+            <span className="hidden sm:inline">7488883287</span>
             <span className="sm:hidden">Call Now</span>
           </Button>
         </div>
