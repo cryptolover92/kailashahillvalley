@@ -15,7 +15,7 @@ const pricingData = [
 export function PriceSection() {
   const handleDownloadPrice = () => {
     const message = encodeURIComponent("Hi, I would like to get the updated price sheet for Kailasha Hill Valley plots.");
-    window.open(`https://wa.me/7978000361?text=${message}`, "_blank");
+    window.open(`https://wa.me/7488883287?text=${message}`, "_blank");
   };
 
   return (

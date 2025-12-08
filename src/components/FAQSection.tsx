@@ -75,7 +75,7 @@ export function FAQSection() {
         <div className="mt-12 text-center">
           <p className="text-muted-foreground mb-4">Still have questions?</p>
           <a
-            href="https://wa.me/7978000361?text=I+have+a+question+about+Kailasha+Hill+Valley"
+            href="https://wa.me/7488883287?text=I+have+a+question+about+Kailasha+Hill+Valley"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
