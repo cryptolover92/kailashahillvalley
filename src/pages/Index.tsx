@@ -8,6 +8,7 @@ import { GallerySection } from "@/components/GallerySection";
 import { BookingProcessSection } from "@/components/BookingProcessSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { FAQSection } from "@/components/FAQSection";
+import { LocationMapSection } from "@/components/LocationMapSection";
 import { CTASection } from "@/components/CTASection";
 import { FloatingButtons } from "@/components/FloatingButtons";
 import { Footer } from "@/components/Footer";
@@ -26,6 +27,7 @@ const Index = () => {
         <BookingProcessSection />
         <TestimonialsSection />
         <FAQSection />
+        <LocationMapSection />
         <CTASection />
       </main>
       <Footer />
