@@ -16,7 +16,7 @@ const pricingData = [
 export function PriceSection() {
   const handleDownloadPrice = () => {
     const message = encodeURIComponent("Hi, I would like to get the updated price sheet for Kailasha Hill Valley plots.");
-    window.open(`https://wa.me/91620343432?text=${message}`, "_blank");
+    window.open(`https://wa.me/916203434328?text=${message}`, "_blank");
   };
 
   return (
@@ -36,42 +36,42 @@ export function PriceSection() {
         </div>
         
         <div className="max-w-4xl mx-auto animate-fade-up delay-100">
-          <div className="card-elevated overflow-hidden">
+          <div className="card-elevated overflow-hidden overflow-x-auto">
             {/* Table Header */}
-            <div className="grid grid-cols-4 bg-primary text-primary-foreground font-semibold text-center py-4 text-sm md:text-base">
+            <div className="grid grid-cols-4 bg-primary text-primary-foreground font-semibold text-center py-4 text-xs sm:text-sm md:text-base min-w-[400px]">
               <div className="px-2 md:px-4">Plot Size</div>
               <div className="px-2 md:px-4">Price/sq.ft</div>
               <div className="px-2 md:px-4">Total Price</div>
-              <div className="px-2 md:px-4">Available</div>
+              <div className="px-2 md:px-4">Status</div>
             </div>
             
             {/* Table Body */}
             {pricingData.map((item, index) => (
               <div 
                 key={index}
-                className={`grid grid-cols-4 text-center py-4 border-b border-border last:border-b-0 hover:bg-accent transition-colors text-sm md:text-base ${
+                className={`grid grid-cols-4 text-center py-3 md:py-4 border-b border-border last:border-b-0 hover:bg-accent transition-colors text-xs sm:text-sm md:text-base min-w-[400px] ${
                   index % 2 === 0 ? "bg-muted/50" : "bg-background"
                 }`}
               >
-                <div className="px-2 md:px-4 font-medium text-foreground flex items-center justify-center gap-1 md:gap-2">
-                  <Check className="w-4 h-4 text-primary hidden md:block" />
-                  {item.size}
+                <div className="px-2 md:px-4 font-medium text-foreground flex items-center justify-center gap-1">
+                  <Check className="w-3 h-3 md:w-4 md:h-4 text-primary hidden sm:block flex-shrink-0" />
+                  <span className="truncate">{item.size}</span>
                 </div>
-                <div className="px-2 md:px-4 text-muted-foreground">
-                  <span className="line-through text-muted-foreground/60 mr-1">{item.oldPrice}</span>
-                  <span className="text-primary font-medium">{item.pricePerSqft}</span>
+                <div className="px-2 md:px-4 text-muted-foreground flex flex-col sm:flex-row items-center justify-center gap-0 sm:gap-1">
+                  <span className="line-through text-muted-foreground/60 text-[10px] sm:text-xs md:text-sm">{item.oldPrice}</span>
+                  <span className="text-primary font-medium text-xs sm:text-sm md:text-base">{item.pricePerSqft}</span>
                 </div>
-                <div className="px-2 md:px-4 font-bold text-primary">{item.total}</div>
-                <div className="px-2 md:px-4">
+                <div className="px-2 md:px-4 font-bold text-primary text-xs sm:text-sm md:text-base truncate">{item.total}</div>
+                <div className="px-2 md:px-4 flex items-center justify-center">
                   {item.status === "available" ? (
                     <span className="inline-flex items-center gap-1 text-green-600 font-semibold">
-                      <span className="w-2 h-2 rounded-full bg-green-500"></span>
-                      <span className="hidden sm:inline">Available</span>
+                      <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0"></span>
+                      <span className="hidden sm:inline text-xs md:text-sm">Available</span>
                     </span>
                   ) : (
                     <span className="inline-flex items-center gap-1 text-red-600 font-semibold">
-                      <span className="w-2 h-2 rounded-full bg-red-500"></span>
-                      <span className="hidden sm:inline">Booked</span>
+                      <span className="w-2 h-2 rounded-full bg-red-500 flex-shrink-0"></span>
+                      <span className="hidden sm:inline text-xs md:text-sm">Booked</span>
                     </span>
                   )}
                 </div>
