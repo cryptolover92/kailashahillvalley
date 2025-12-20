@@ -24,11 +24,11 @@ export function Footer() {
             <h4 className="font-bold text-lg mb-4">Contact Us</h4>
             <div className="space-y-3">
               <a 
-                href="tel:7488883287" 
+                href="tel:+91620343432" 
                 className="flex items-center gap-3 text-primary-foreground/80 hover:text-secondary transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                7488883287
+                +91 620343432
               </a>
               <div className="flex items-start gap-3 text-primary-foreground/80">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />

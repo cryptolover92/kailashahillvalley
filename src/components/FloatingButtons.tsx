@@ -6,7 +6,7 @@ export function FloatingButtons() {
     <>
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/7488883287?text=Interested+in+Plot+at+Kailasha+Hill+Valley"
+        href="https://wa.me/91620343432?text=Interested+in+Plot+at+Kailasha+Hill+Valley"
         target="_blank"
         rel="noopener noreferrer"
         className="floating-button bottom-6 right-6 w-14 h-14 md:w-16 md:h-16 bg-[#25D366] text-white animate-float"
@@ -21,7 +21,7 @@ export function FloatingButtons() {
           <Button 
             variant="whatsapp" 
             className="flex-1"
-            onClick={() => window.open("https://wa.me/7488883287?text=Interested+in+Plot+at+Kailasha+Hill+Valley", "_blank")}
+            onClick={() => window.open("https://wa.me/91620343432?text=Interested+in+Plot+at+Kailasha+Hill+Valley", "_blank")}
           >
             <MessageCircle className="w-5 h-5" />
             WhatsApp
@@ -29,7 +29,7 @@ export function FloatingButtons() {
           <Button 
             variant="call" 
             className="flex-1"
-            onClick={() => window.open("tel:7488883287", "_self")}
+            onClick={() => window.open("tel:+91620343432", "_self")}
           >
             <Phone className="w-5 h-5" />
             Call Now

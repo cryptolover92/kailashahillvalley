@@ -29,7 +29,7 @@ export function CTASection() {
                 size="lg"
                 onClick={() => {
                   const message = encodeURIComponent("Hi, I would like to get the brochure for Kailasha Hill Valley plots.");
-                  window.open(`https://wa.me/7488883287?text=${message}`, "_blank");
+                  window.open(`https://wa.me/91620343432?text=${message}`, "_blank");
                 }}
               >
                 Get Brochure Instantly
@@ -39,10 +39,10 @@ export function CTASection() {
                 variant="outline" 
                 size="lg"
                 className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-                onClick={() => window.open("tel:7488883287", "_self")}
+                onClick={() => window.open("tel:+91620343432", "_self")}
               >
                 <Phone className="w-5 h-5" />
-                Call: 7488883287
+                Call: +91 620343432
               </Button>
             </div>
             
@@ -52,7 +52,7 @@ export function CTASection() {
                 size="lg"
                 onClick={() => {
                   const message = encodeURIComponent("Hi, I'm interested in Kailasha Hill Valley plots. Please share details.");
-                  window.open(`https://wa.me/7488883287?text=${message}`, "_blank");
+                  window.open(`https://wa.me/91620343432?text=${message}`, "_blank");
                 }}
               >
                 <MessageCircle className="w-5 h-5" />

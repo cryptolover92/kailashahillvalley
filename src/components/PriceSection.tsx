@@ -2,20 +2,21 @@ import { Button } from "@/components/ui/button";
 import { Download, AlertTriangle, Check } from "lucide-react";
 
 const pricingData = [
-  { size: "820 sq.ft", pricePerSqft: "₹1,599", total: "₹13,11,180" },
-  { size: "920 sq.ft", pricePerSqft: "₹1,599", total: "₹14,71,080" },
-  { size: "1000 sq.ft", pricePerSqft: "₹1,599", total: "₹15,99,000" },
-  { size: "1040 sq.ft", pricePerSqft: "₹1,599", total: "₹16,62,960" },
-  { size: "1100 sq.ft", pricePerSqft: "₹1,599", total: "₹17,58,900" },
-  { size: "1300 sq.ft", pricePerSqft: "₹1,599", total: "₹20,78,700" },
-  { size: "1458 sq.ft", pricePerSqft: "₹1,599", total: "₹23,31,342" },
-  { size: "1749 sq.ft", pricePerSqft: "₹1,599", total: "₹27,96,651" },
+  { size: "820 sq.ft", oldPrice: "₹1,799", pricePerSqft: "₹1,599", total: "₹13,11,180", status: "booked" },
+  { size: "920 sq.ft", oldPrice: "₹1,799", pricePerSqft: "₹1,599", total: "₹14,71,080", status: "booked" },
+  { size: "1000 sq.ft", oldPrice: "₹1,799", pricePerSqft: "₹1,599", total: "₹15,99,000", status: "available" },
+  { size: "1040 sq.ft", oldPrice: "₹1,799", pricePerSqft: "₹1,599", total: "₹16,62,960", status: "booked" },
+  { size: "1100 sq.ft", oldPrice: "₹1,799", pricePerSqft: "₹1,599", total: "₹17,58,900", status: "available" },
+  { size: "1300 sq.ft", oldPrice: "₹1,799", pricePerSqft: "₹1,599", total: "₹20,78,700", status: "booked" },
+  { size: "1458 sq.ft", oldPrice: "₹1,799", pricePerSqft: "₹1,599", total: "₹23,31,342", status: "booked" },
+  { size: "1749 sq.ft", oldPrice: "₹1,799", pricePerSqft: "₹1,599", total: "₹27,96,651", status: "available" },
+  { size: "2400 sq.ft", oldPrice: "₹1,799", pricePerSqft: "₹1,599", total: "₹38,37,600", status: "available" },
 ];
 
 export function PriceSection() {
   const handleDownloadPrice = () => {
     const message = encodeURIComponent("Hi, I would like to get the updated price sheet for Kailasha Hill Valley plots.");
-    window.open(`https://wa.me/7488883287?text=${message}`, "_blank");
+    window.open(`https://wa.me/91620343432?text=${message}`, "_blank");
   };
 
   return (
@@ -37,26 +38,43 @@ export function PriceSection() {
         <div className="max-w-4xl mx-auto animate-fade-up delay-100">
           <div className="card-elevated overflow-hidden">
             {/* Table Header */}
-            <div className="grid grid-cols-3 bg-primary text-primary-foreground font-semibold text-center py-4">
-              <div className="px-4">Plot Size</div>
-              <div className="px-4">Price/sq.ft</div>
-              <div className="px-4">Total Price</div>
+            <div className="grid grid-cols-4 bg-primary text-primary-foreground font-semibold text-center py-4 text-sm md:text-base">
+              <div className="px-2 md:px-4">Plot Size</div>
+              <div className="px-2 md:px-4">Price/sq.ft</div>
+              <div className="px-2 md:px-4">Total Price</div>
+              <div className="px-2 md:px-4">Available</div>
             </div>
             
             {/* Table Body */}
             {pricingData.map((item, index) => (
               <div 
                 key={index}
-                className={`grid grid-cols-3 text-center py-4 border-b border-border last:border-b-0 hover:bg-accent transition-colors ${
+                className={`grid grid-cols-4 text-center py-4 border-b border-border last:border-b-0 hover:bg-accent transition-colors text-sm md:text-base ${
                   index % 2 === 0 ? "bg-muted/50" : "bg-background"
                 }`}
               >
-                <div className="px-4 font-medium text-foreground flex items-center justify-center gap-2">
+                <div className="px-2 md:px-4 font-medium text-foreground flex items-center justify-center gap-1 md:gap-2">
                   <Check className="w-4 h-4 text-primary hidden md:block" />
                   {item.size}
                 </div>
-                <div className="px-4 text-muted-foreground">{item.pricePerSqft}</div>
-                <div className="px-4 font-bold text-primary">{item.total}</div>
+                <div className="px-2 md:px-4 text-muted-foreground">
+                  <span className="line-through text-muted-foreground/60 mr-1">{item.oldPrice}</span>
+                  <span className="text-primary font-medium">{item.pricePerSqft}</span>
+                </div>
+                <div className="px-2 md:px-4 font-bold text-primary">{item.total}</div>
+                <div className="px-2 md:px-4">
+                  {item.status === "available" ? (
+                    <span className="inline-flex items-center gap-1 text-green-600 font-semibold">
+                      <span className="w-2 h-2 rounded-full bg-green-500"></span>
+                      <span className="hidden sm:inline">Available</span>
+                    </span>
+                  ) : (
+                    <span className="inline-flex items-center gap-1 text-red-600 font-semibold">
+                      <span className="w-2 h-2 rounded-full bg-red-500"></span>
+                      <span className="hidden sm:inline">Booked</span>
+                    </span>
+                  )}
+                </div>
               </div>
             ))}
           </div>

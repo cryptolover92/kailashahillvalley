@@ -5,7 +5,7 @@ import layoutImage from "@/assets/project-layout.jpg";
 export function LayoutMapSection() {
   const handleReservePlot = () => {
     const message = encodeURIComponent("Hi, I want to select and reserve a plot at Kailasha Hill Valley. Please share available options.");
-    window.open(`https://wa.me/7488883287?text=${message}`, "_blank");
+    window.open(`https://wa.me/91620343432?text=${message}`, "_blank");
   };
 
   return (

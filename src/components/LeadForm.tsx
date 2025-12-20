@@ -10,7 +10,7 @@ interface LeadFormProps {
   title?: string;
 }
 
-const plotSizes = ["1000 sq.ft", "1100 sq.ft", "1300 sq.ft", "1458 sq.ft", "1749 sq.ft"];
+const plotSizes = ["1000 sq.ft", "1200 sq.ft", "1800 sq.ft", "2400 sq.ft"];
 
 export function LeadForm({ variant = "hero", showBrochure = true, title }: LeadFormProps) {
   const [formData, setFormData] = useState({
@@ -49,7 +49,7 @@ export function LeadForm({ variant = "hero", showBrochure = true, title }: LeadF
       const whatsappMessage = encodeURIComponent(
         `Hi, I'm interested in Kailasha Hill Valley plots.\n\nName: ${formData.name}\nMobile: ${formData.mobile}\nPreferred Plot Size: ${formData.plotSize || "Not specified"}`
       );
-      window.open(`https://wa.me/7488883287?text=${whatsappMessage}`, "_blank");
+      window.open(`https://wa.me/91620343432?text=${whatsappMessage}`, "_blank");
       
       toast({
         title: "Request Submitted!",
@@ -65,7 +65,7 @@ export function LeadForm({ variant = "hero", showBrochure = true, title }: LeadF
     const whatsappMessage = encodeURIComponent(
       "Hi, I would like to download the brochure for Kailasha Hill Valley plots."
     );
-    window.open(`https://wa.me/7488883287?text=${whatsappMessage}`, "_blank");
+    window.open(`https://wa.me/91620343432?text=${whatsappMessage}`, "_blank");
     toast({
       title: "Brochure Request Sent",
       description: "You'll receive the brochure on WhatsApp shortly!",
