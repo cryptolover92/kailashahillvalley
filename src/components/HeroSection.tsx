@@ -13,7 +13,7 @@ const features = [
 export function HeroSection() {
   const handleWhatsAppVisit = () => {
     const message = encodeURIComponent("Hi, I want to book a FREE site visit for Kailasha Hill Valley plots in Rajgir.");
-    window.open(`https://wa.me/91620343432?text=${message}`, "_blank");
+    window.open(`https://wa.me/916203434328?text=${message}`, "_blank");
   };
 
   return (
@@ -83,7 +83,7 @@ export function HeroSection() {
                 size="lg"
                 onClick={() => {
                   const message = encodeURIComponent("Hi, I would like to download the brochure for Kailasha Hill Valley.");
-                  window.open(`https://wa.me/91620343432?text=${message}`, "_blank");
+                  window.open(`https://wa.me/916203434328?text=${message}`, "_blank");
                 }}
               >
                 Download Brochure PDF
