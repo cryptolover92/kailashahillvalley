@@ -13,7 +13,7 @@ const features = [
 export function HeroSection() {
   const handleWhatsAppVisit = () => {
     const message = encodeURIComponent("Hi, I want to book a FREE site visit for Kailasha Hill Valley plots in Rajgir.");
-    window.open(`https://wa.me/7488883287?text=${message}`, "_blank");
+    window.open(`https://wa.me/91620343432?text=${message}`, "_blank");
   };
 
   return (
@@ -44,6 +44,7 @@ export function HeroSection() {
             
             <p className="text-xl md:text-2xl font-medium text-primary-foreground/90 mb-6">
               Premium Residential Plots at Just{" "}
+              <span className="text-primary-foreground/60 line-through">₹1799/sqft</span>{" "}
               <span className="text-secondary font-bold">₹1599/sqft</span>
             </p>
             
@@ -82,7 +83,7 @@ export function HeroSection() {
                 size="lg"
                 onClick={() => {
                   const message = encodeURIComponent("Hi, I would like to download the brochure for Kailasha Hill Valley.");
-                  window.open(`https://wa.me/7488883287?text=${message}`, "_blank");
+                  window.open(`https://wa.me/91620343432?text=${message}`, "_blank");
                 }}
               >
                 Download Brochure PDF
