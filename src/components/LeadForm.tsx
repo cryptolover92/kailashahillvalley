@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import { Send, Download, CheckCircle } from "lucide-react";
 
 interface LeadFormProps {
@@ -21,7 +22,7 @@ export function LeadForm({ variant = "hero", showBrochure = true, title }: LeadF
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.name || !formData.mobile) {
@@ -44,8 +45,18 @@ export function LeadForm({ variant = "hero", showBrochure = true, title }: LeadF
 
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Save to database
+      const { error } = await supabase.from("leads").insert({
+        name: formData.name.trim(),
+        mobile: formData.mobile.trim(),
+        plot_size: formData.plotSize || null,
+        source: "lead_form",
+      });
+
+      if (error) throw error;
+
+      // Open WhatsApp
       const whatsappMessage = encodeURIComponent(
         `Hi, I'm interested in Kailasha Hill Valley plots.\n\nName: ${formData.name}\nMobile: ${formData.mobile}\nPreferred Plot Size: ${formData.plotSize || "Not specified"}`
       );
@@ -56,11 +67,18 @@ export function LeadForm({ variant = "hero", showBrochure = true, title }: LeadF
         description: "Our team will contact you shortly.",
       });
       
-      setIsSubmitting(false);
       setFormData({ name: "", mobile: "", plotSize: "" });
-    }, 500);
+    } catch (error) {
+      console.error("Error submitting lead:", error);
+      toast({
+        title: "Submission failed",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
-
   const handleBrochureDownload = () => {
     const whatsappMessage = encodeURIComponent(
       "Hi, I would like to download the brochure for Kailasha Hill Valley plots."

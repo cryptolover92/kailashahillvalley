@@ -12,12 +12,13 @@ import { LocationMapSection } from "@/components/LocationMapSection";
 import { CTASection } from "@/components/CTASection";
 import { FloatingButtons } from "@/components/FloatingButtons";
 import { Footer } from "@/components/Footer";
+import { LeadPopupForm } from "@/components/LeadPopupForm";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-<main>
+      <main>
         <HeroSection />
         <AboutSection />
         <WhyBuySection />
@@ -32,6 +33,7 @@ const Index = () => {
       </main>
       <Footer />
       <FloatingButtons />
+      <LeadPopupForm />
     </div>
   );
 };
