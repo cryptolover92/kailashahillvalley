@@ -1,16 +1,16 @@
 import { Camera, MapPin } from "lucide-react";
-import entranceImage from "@/assets/entrance-gate.jpg";
-import ropewayImage from "@/assets/ropeway.jpg";
-import panduPokharImage from "@/assets/pandu-pokhar.jpg";
-import stadiumImage from "@/assets/stadium.jpg";
-import templeImage from "@/assets/temple.jpg";
+import rajgirChowkImage from "@/assets/rajgir-chowk.jpg";
+import panduPokharImage from "@/assets/pandu-pokhar-new.jpg";
+import nagarParishadImage from "@/assets/nagar-parishad.jpg";
+import viraytanHospitalImage from "@/assets/viraytan-hospital.jpg";
+import nalandaUniversityImage from "@/assets/nalanda-university.jpg";
 
 const galleryItems = [
-  { image: entranceImage, title: "Rajgir Chowk", distance: "5 km", description: "Main town center" },
+  { image: rajgirChowkImage, title: "Rajgir Chowk", distance: "5 km", description: "Main town center" },
   { image: panduPokharImage, title: "Pandu Pokhar", distance: "4 km", description: "Historic pond area" },
-  { image: ropewayImage, title: "Nagar Parishad", distance: "3 km", description: "Municipal office" },
-  { image: stadiumImage, title: "Viraytan Hospital", distance: "3.5 km", description: "Healthcare facility" },
-  { image: templeImage, title: "Nalanda University", distance: "500 m", description: "Heritage campus" },
+  { image: nagarParishadImage, title: "Nagar Parishad", distance: "3 km", description: "Municipal office" },
+  { image: viraytanHospitalImage, title: "Viraytan Hospital", distance: "3.5 km", description: "Healthcare facility" },
+  { image: nalandaUniversityImage, title: "Nalanda University", distance: "500 m", description: "Heritage campus" },
 ];
 
 const additionalLocations = [
