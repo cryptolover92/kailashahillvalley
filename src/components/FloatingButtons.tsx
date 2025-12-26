@@ -1,4 +1,4 @@
-import { Phone, MessageCircle, Download } from "lucide-react";
+import { MessageCircle, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function FloatingButtons() {
@@ -8,7 +8,7 @@ export function FloatingButtons() {
   };
 
   return (
-    <div className="fixed bottom-16 left-0 right-0 z-40 bg-card border-t border-border p-3">
+    <div className="fixed bottom-[52px] left-0 right-0 z-40 bg-card border-t border-border p-3">
       <div className="flex gap-2 max-w-4xl mx-auto">
         <Button 
           variant="whatsapp" 
@@ -16,7 +16,7 @@ export function FloatingButtons() {
           onClick={() => window.open("https://wa.me/916203434328?text=Interested+in+Plot+at+Kailasha+Hill+Valley", "_blank")}
         >
           <MessageCircle className="w-5 h-5" />
-          <span className="hidden sm:inline">WhatsApp</span>
+          <span>WhatsApp</span>
         </Button>
         <Button 
           variant="outline" 
@@ -26,15 +26,6 @@ export function FloatingButtons() {
           <Download className="w-5 h-5" />
           <span className="hidden sm:inline">Download Brochure</span>
           <span className="sm:hidden">Brochure</span>
-        </Button>
-        <Button 
-          variant="call" 
-          className="flex-1"
-          onClick={() => window.open("tel:+916203434328", "_self")}
-        >
-          <Phone className="w-5 h-5" />
-          <span className="hidden sm:inline">Call Now</span>
-          <span className="sm:hidden">Call</span>
         </Button>
       </div>
     </div>
